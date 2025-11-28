@@ -88,7 +88,6 @@ export default async function runApp(
   // importantly run the final setup after setting up all the other routes so
   // the catch-all route doesn't interfere with the other routes
   await setup(app, server);
-
   // ALWAYS serve the app on the port specified in the environment variable PORT
   // Other ports are firewalled. Default to 5000 if not specified.
   const port = parseInt(process.env.PORT || '5000', 10);
